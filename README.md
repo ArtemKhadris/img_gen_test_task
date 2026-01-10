@@ -71,3 +71,7 @@ Image generated with the settings specified in the config:
 
 <img width="1024" height="1024" alt="result" src="https://github.com/user-attachments/assets/65cc9284-31f3-49de-a34f-b2962656e73d" />
 
+# Step 3 - Jypiter notepad
+
+The notebook is similar to the code from step 2. To run the notebook, you need to complete the installation from step 1 and step 2, and download the model and place it in the path specified in step 2.
+
