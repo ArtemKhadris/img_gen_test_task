@@ -57,3 +57,17 @@ Results:
    Pic:
 
    <img width="2048" height="2048" alt="pws4_00005_" src="https://github.com/user-attachments/assets/5a8124a0-f059-4f08-840a-da9abe48c9f8" />
+
+# Step 2 - Python Mini Pipeline
+
+In the second step we will also use PixelWave, but this will be the [fine-tuned version of SDXL](https://civitai.com/models/141592?modelVersionId=716090).
+
+We will use the same environment that ComfyUI provided us, we only need to add ```pip install diffusers```.
+
+All generation settings are specified in the ```config.py``` file. The image generation itself is performed using ```generate.py``` (don't forget to change the path to the saved image).
+The FULL SYSTEM PATH must be specified for the model to work correctly on Windows.
+
+Image generated with the settings specified in the config:
+
+<img width="1024" height="1024" alt="result" src="https://github.com/user-attachments/assets/65cc9284-31f3-49de-a34f-b2962656e73d" />
+
