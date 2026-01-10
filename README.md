@@ -73,5 +73,32 @@ Image generated with the settings specified in the config:
 
 # Step 3 - Jypiter notepad
 
-The notebook is similar to the code from step 2. To run the notebook, you need to complete the installation from step 1 and step 2, and download the model and place it in the path specified in step 2.
+The notebook (```generate.ipynb```) is similar to the code from step 2. To run the notebook, you need to complete the installation from step 1 and step 2, and download the model and place it in the path specified in step 2.
 
+# Step 4 - Description of the experience
+
+## Practical experience with diffusion ecosystem tools
+
+I have hands-on experience with the following technologies:
+
+LoRA (Low-Rank Adaptation) — prepared datasets, trained LoRA adapters for different Stable Diffusion–based models (including SD 1.5 and SDXL), and integrated them into inference pipelines. I have worked with prompt tuning, weight scaling, and quality evaluation for style consistency.
+
+ControlNet — built and used pipelines with various ControlNet models (pose, depth, lineart, etc.), including data preparation, conditioning setup, and integration into both ComfyUI workflows and custom pipelines.
+
+DreamBooth / fine-tuning — have experience preparing training data and running fine-tuning experiments to adapt base models to specific styles, with attention to overfitting and generalization.
+
+ComfyUI / Automatic1111 — actively used both interfaces for experimentation, parameter tuning, debugging generation issues, and building reusable workflows. ComfyUI was primarily used for flexible, node-based pipeline construction, while Automatic1111 was used for rapid iteration and testing.
+
+## Key considerations for deploying an internal image generation service
+
+When launching a diffusion-based image generation service inside a company, several key aspects must be considered.
+
+First, data and licensing are critical: it is important to clearly understand the licenses of base models, fine-tuned checkpoints, LoRAs, and datasets, and to ensure that generated content can be legally used for commercial or internal purposes. (As you can see, one of the generated images has a link to a website at the bottom, but this website does not exist, so you need to keep an eye on this too.)
+
+Second, performance and stability matter for daily usage. This includes predictable inference times, proper error handling, and safeguards against model crashes or out-of-memory issues, especially when multiple users access the system simultaneously.
+
+Third, infrastructure and GPU resources must be planned carefully. SDXL-class models require sufficient VRAM, and scaling strategies (multiple GPUs, job queues, batching, or mixed precision) should be considered to balance cost and throughput.
+
+Finally, usability for the team is essential. Non-technical users benefit from simple interfaces, clear presets, and reproducible results, while technical users need transparency, configurability, and the ability to debug or extend pipelines without friction.
+
+A successful internal service balances technical robustness with ease of use, enabling teams to focus on creative tasks rather than tooling complexity.
