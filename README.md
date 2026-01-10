@@ -60,7 +60,7 @@ Results:
 
 # Step 2 - Python Mini Pipeline
 
-In the second step we will also use PixelWave, but this will be the [fine-tuned version of SDXL](https://civitai.com/models/141592?modelVersionId=716090).
+In the second step we will also use PixelWave, but this will be the [fine-tuned version of SDXL](https://civitai.com/models/141592?modelVersionId=716090). Model shold be located in ```...\ComfyUI\models\diffusion_models``` folder
 
 We will use the same environment that ComfyUI provided us, we only need to add ```pip install diffusers```.
 
