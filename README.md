@@ -102,3 +102,54 @@ Third, infrastructure and GPU resources must be planned carefully. SDXL-class mo
 Finally, usability for the team is essential. Non-technical users benefit from simple interfaces, clear presets, and reproducible results, while technical users need transparency, configurability, and the ability to debug or extend pipelines without friction.
 
 A successful internal service balances technical robustness with ease of use, enabling teams to focus on creative tasks rather than tooling complexity.
+
+# Step 4 - Character Generation
+
+To generate the character, a fine-tuned version of SD1.5, [Counterfeit-V3.0](https://civitai.com/models/4468/counterfeit-v30), was used.
+
+Additionally, [Good Hands LoRA](https://civitai.com/models/324264/good-hands-lora) was used for improved hand rendering. 
+
+For some images, [LoRA Anime Lineart](https://civitai.com/models/16014/anime-lineart-manga-like-style) was used to create line art. 
+
+For some images, [ControlNET OpenPose](https://huggingface.co/lllyasviel/control_v11p_sd15_openpose) was used (poses are in the ```poses``` folder). 
+
+[VAE-kl-f8-anime2](https://civitai.com/models/23906/kl-f8-anime2-vae) was used for the VAE for the all of the images. 
+
+[EasyNegativeV2](https://huggingface.co/gsdf/Counterfeit-V3.0/blob/main/embedding/EasyNegativeV2.safetensors) embedding was used for the negative prompt. 
+
+All images were upscaled using [AnimeSharp](https://openmodeldb.info/models/4x-AnimeSharp). 
+
+All other settings are specified in the ```wf_gen.json``` file. 
+
+The best results are shown below, the remaining images are in the ```results``` folder.
+
+Anchor image, that was used for ControlNET OpenPose:
+   
+   Seed: ```12```
+
+   Steps: ```25```
+
+   Sampler: ```DPM++ 2M & Karras```
+
+   Res: ```512x1024```
+
+   Pic:
+
+   <img width="512" height="1024" alt="pixelbuildings128-v1-raw-_00368_" src="https://github.com/user-attachments/assets/52ce3ba2-c34f-4320-a52f-4f3a7e0f85a4" />
+
+Results:
+
+<img width="2048" height="4096" alt="pixelbuildings128-v1-upscale-x8-_00370_" src="https://github.com/user-attachments/assets/fee9502e-848f-4d91-b978-82ccb7c240bc" />
+
+<img width="2048" height="4096" alt="pixelbuildings128-v1-upscale-x8-_00371_" src="https://github.com/user-attachments/assets/a184f76b-3680-46a3-bee5-aa731ffdb0e0" />
+
+<img width="2048" height="4096" alt="pixelbuildings128-v1-upscale-x8-_00372_" src="https://github.com/user-attachments/assets/25b023f2-58d6-459c-a5f9-2019a5dacec4" />
+
+<img width="2048" height="4096" alt="pixelbuildings128-v1-upscale-x8-_00373_" src="https://github.com/user-attachments/assets/da6a94d7-d45c-4c2b-be67-61ddffcf2d3b" />
+
+<img width="2048" height="4096" alt="pixelbuildings128-v1-upscale-x8-_00399_" src="https://github.com/user-attachments/assets/a44b25e8-3661-4ee9-b2ad-db2356c028bf" />
+
+<img width="2048" height="4096" alt="pixelbuildings128-v1-upscale-x8-_00404_" src="https://github.com/user-attachments/assets/46097619-dbc7-4923-a50f-5be666ce15f9" />
+
+<img width="2048" height="4096" alt="pixelbuildings128-v1-upscale-x8-_00419_" src="https://github.com/user-attachments/assets/20f4da1f-71fb-4200-9cce-f467f9f06b94" />
+
