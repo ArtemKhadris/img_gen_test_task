@@ -121,7 +121,7 @@ All images were upscaled using [AnimeSharp](https://openmodeldb.info/models/4x-A
 
 All other settings are specified in the ```wf_gen.json``` file. 
 
-The best results are shown below, the remaining images are in the ```results``` folder.
+The best results are shown below, the remaining images are in the ```results``` folder, which contains both pre- (512x1024) and post-upscaling (2048x4096) images.
 
 Anchor image, that was used for ControlNET OpenPose:
    
